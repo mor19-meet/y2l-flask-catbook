@@ -16,5 +16,10 @@ def view_detales(id):
 	return render_template (
 		"cat.html" , cat = cat)
 
+@app.route('/new')
+def new_cat():
+	new = create_cat()
+	return render_template ("new.html")
+
 if __name__ == '__main__':
    app.run(debug = True)
